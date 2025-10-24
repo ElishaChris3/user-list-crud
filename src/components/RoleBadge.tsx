@@ -2,10 +2,10 @@ import clsx from "clsx";
 
 export function RoleBadge({ role }: { role: string }) {
   const styles = clsx(
-    "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset",
-    role === "ADMIN" && "bg-red-50 text-red-700 ring-red-600/20",
-    role === "EDITOR" && "bg-blue-50 text-blue-700 ring-blue-600/20",
-    role === "VIEWER" && "bg-green-50 text-green-700 ring-green-600/20"
+    "inline-flex items-center rounded-full px-3 py-0.5 text-xs font-semibold shadow-sm transition-colors",
+    role === "ADMIN" && "bg-gradient-to-r from-rose-100 to-rose-200 text-rose-700",
+    role === "EDITOR" && "bg-gradient-to-r from-sky-100 to-blue-200 text-blue-700",
+    role === "VIEWER" && "bg-gradient-to-r from-emerald-100 to-green-200 text-green-700"
   );
   return <span className={styles}>{role}</span>;
 }
