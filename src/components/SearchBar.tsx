@@ -22,17 +22,17 @@ export function SearchBar({
   }, [q, role, onChange]);
 
   return (
-    <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <input
-        className="input sm:w-80"
-        placeholder="Search by name or email…"
+        className="w-6xl sm:w-100 rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm outline-none transition focus:ring-2 focus:ring-indigo-300"
+        placeholder="🔍 Search by name or email…"
         value={q}
         onChange={(e) => setQ(e.target.value)}
       />
       <div className="flex items-center gap-2">
         <label className="text-sm text-gray-600">Role</label>
         <select
-          className="input w-40"
+          className="rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm outline-none transition focus:ring-2 focus:ring-indigo-300"
           value={role}
           onChange={(e) => setRole(e.target.value as RoleFilter)}
         >
