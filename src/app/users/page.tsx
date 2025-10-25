@@ -59,7 +59,7 @@ export default function UsersPage() {
   }, []);
 
   return (
-    <div>
+    <div className="mx-10" >
       <HeaderActions />
       <SearchBar onChange={onSearchChange} />
       {loading ? (
