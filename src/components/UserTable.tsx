@@ -45,11 +45,12 @@ export function UserTable({
             {users.map((u, i) => (
               <tr
                 key={u.id}
-                className={`transition-colors duration-200 ${
-                  i % 2 === 0
-                    ? "bg-gradient-to-r from-white to-gray-50"
-                    : "bg-gradient-to-r from-gray-50 to-white"
-                } hover:bg-indigo-100/30`}
+               className={`relative transition-colors duration-200 ${
+  i % 2 === 0
+    ? "bg-gradient-to-r from-white to-gray-50"
+    : "bg-gradient-to-r from-gray-50 to-white"
+} hover:after:absolute hover:after:inset-0 hover:after:bg-indigo-100/40 hover:after:content-[''] hover:after:rounded-lg`}
+
               >
                 <td className="px-6 py-4 text-gray-800 font-medium">{u.name}</td>
                 <td className="px-6 py-4 text-gray-600">{u.email}</td>
