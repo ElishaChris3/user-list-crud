@@ -4,6 +4,8 @@ import { userSchema } from "../../../../../lib/validator";
 import { isValidObjectIdString } from "../../../../../lib/validator";
  
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 export const runtime = "nodejs";
 
 // ✅ Correctly typed params according to Next.js 14 route handler signatures
